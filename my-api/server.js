@@ -34,28 +34,27 @@ data.posts = [
   {
     id: 'xyz-2',
     content: "Second Post - Hello again",
-    userId: 'abc-1',
+    userId: 'abc-2',
   },
   {
     id: 'xyz-3',
     content: "third Post - Hello again",
-    userId: 'abc-1',
-  },
-  {
-    id: 'xyz-3',
-    content: "Random Post",
-    userId: 'abc-2',
+    userId: 'abc-3',
   }
 ];
 
 data.users = [
   {
     id: 'abc-1', 
-    username: "andy25",
+    username: "Muhammad Nabil",
   },
   {
     id: 'abc-2', 
-    username: "randomUser",
+    username: "Muhammad Nur Hafizzan",
+  },
+  {
+    id: 'abc-3', 
+    username: "Muhammad Ulfi Hakeemi",
   }
 ];
 
