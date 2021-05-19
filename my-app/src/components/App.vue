@@ -4,7 +4,7 @@
     <ul>
       <li v-for="post in posts" :key="post.id">{{ post.content }}</li>
     </ul>
-    <div>
+    <div class="text-gray-500">
       <input v-model="newPostContent" />
       <button @click="addPost()">Add Post</button>
     </div>

@@ -38,6 +38,11 @@ data.posts = [
   },
   {
     id: 'xyz-3',
+    content: "third Post - Hello again",
+    userId: 'abc-1',
+  },
+  {
+    id: 'xyz-3',
     content: "Random Post",
     userId: 'abc-2',
   }
