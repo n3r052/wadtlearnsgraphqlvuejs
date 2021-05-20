@@ -1,15 +1,47 @@
 <template>
   <div id="app">
-    <p class="username">{{ currentUser.username }}'s posts:</p>
+    <!-- <p class="username">{{ currentUser.username }}'s posts:</p>
     <ul>
       <li v-for="post in posts" :key="post.id">{{ post.content }}</li>
     </ul>
     <div class="text-gray-500">
       <input v-model="newPostContent" />
       <button @click="addPost()">Add Post</button>
-    </div>
+    </div> -->
+    <table v-for="post in posts" :key="post.id" width="100%">
+      <tr>
+        <th>NAME</th>
+        <th>TITLE</th>
+        <th>USER ID</th>
+        <th>ID</th>
+      </tr>
+
+      <tr>
+        <td>
+          <img src="../assets/img/user.png" width= "30px" height = "30px" alt="">
+          {{ currentUser.username }}</td>
+        <td>{{ post.content }}</td>
+        <td>{{ post.userId }}</td>
+        <td>{{ post.id }}</td>
+      </tr>
+
+    </table>
   </div>
+
 </template>
+
+<style scoped>
+table, tr, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+td{
+  text-align: center;
+}
+
+</style>
 
 <script>
 import gql from "graphql-tag";
@@ -107,4 +139,5 @@ export default {
   }
 };
 </script>
+
 
