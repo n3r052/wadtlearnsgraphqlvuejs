@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title><%= htmlWebpackPlugin.options.title %></title>
 
-    
+
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4DBA87">
-    
+
 
     <% if (htmlWebpackPlugin.options.description) { %>
     <meta name="description" content="<%= htmlWebpackPlugin.options.description %>"/>
@@ -19,6 +19,7 @@
         for (var file of chunk.files) {
           if (file.match(/\.(js|css)$/)) { %>
     <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
     <noscript>

@@ -4,22 +4,26 @@
     <ul>
       <li v-for="post in posts" :key="post.id">{{ post.content }}</li>
     </ul>
-    <div class="text-gray-500">
+    <div>
       <input v-model="newPostContent" />
       <button @click="addPost()">Add Post</button>
     </div> -->
-    <table v-for="post in posts" :key="post.id" width="100%">
+
+    <div>
+      <input v-model="newPostContent" />
+      <button @click="addPost()">Add Post</button>
+    </div>
+    <table class="min-w-full divide-y divide-gray-200" >
       <tr>
-        <th>NAME</th>
-        <th>TITLE</th>
-        <th>USER ID</th>
-        <th>ID</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">NAME</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">TITLE</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">USER ID</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
       </tr>
 
-      <tr>
+      <tr v-for="post in posts" :key="post.id">
         <td>
-          <img src="../assets/img/user.png" width= "30px" height = "30px" alt="">
-          {{ currentUser.username }}</td>
+          <img src="../assets/img/user.png" width= "30px" height = "30px" alt="">{{ currentUser.username }}</td>
         <td>{{ post.content }}</td>
         <td>{{ post.userId }}</td>
         <td>{{ post.id }}</td>
@@ -35,10 +39,6 @@ table, tr, th, td{
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
-}
-
-td{
-  text-align: center;
 }
 
 </style>
