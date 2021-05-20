@@ -29,11 +29,14 @@ data.posts = [
   { 
     id: 'xyz-1',
     content: "First Post - Hello world",
+    username: "Muhammad Nabil",
+    image: '../my-app/src/assets/img/user.png',
     userId: 'abc-1',
   },
   {
     id: 'xyz-2',
     content: "Second Post - Hello again",
+    username: "Muhammad Nur Hafizzan",
     userId: 'abc-2',
   },
   {
